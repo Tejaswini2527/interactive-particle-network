@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: #050510;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.content {
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.content h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+  text-shadow: 
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff,
+    0 0 40px #00f7ff,
+    0 0 80px #0099ff;
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.content p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #a0e7ff;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 
+      0 0 8px #00f7ff,
+      0 0 16px #00f7ff,
+      0 0 30px #00f7ff;
+  }
+  to {
+    text-shadow: 
+      0 0 15px #00f7ff,
+      0 0 30px #00f7ff,
+      0 0 60px #00f7ff,
+      0 0 100px #0099ff;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+}
